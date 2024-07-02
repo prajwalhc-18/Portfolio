@@ -1,0 +1,27 @@
+.circle-card {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px; /* Adjust spacing between circles */
+}
+
+.circle-card .card {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Background color for the circle */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.circle-card .card-body {
+  padding: 20px; /* Adjust padding within the circle */
+}
+
+.circle-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.circle-card .card-text {
+  font-size: 16px;
+}
