@@ -1,6 +1,14 @@
 body {
+  background-color: #fff;
+}
+
+.header-container {
   padding-left: 8%;
   padding-right: 8%;
+}
+
+header {
+  background-color: green;
 }
 
 .circle-card {
@@ -63,7 +71,6 @@ body {
   color: #6c757d;
 }
 
-.header,
 .footer {
   padding-left: 8%;
   padding-right: 8%;
