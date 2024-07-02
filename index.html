@@ -228,7 +228,7 @@
 
       <section class="message-box">
         <div class="container">
-          <h2>Drop A Message</h2>
+          <h2 class="text-center">Drop A Message</h2>
           <form>
             <div class="row mb-3">
               <div class="col-md-6">
@@ -262,11 +262,15 @@
               </div>
               <div class="col-md-6">
                 <label for="services" class="form-label">Select Services</label>
-                <select class="form-select" id="services">
+                <select class="form-select" id="services" required>
                   <option selected>Select service...</option>
-                  <option value="service1">Service 1</option>
-                  <option value="service2">Service 2</option>
-                  <option value="service3">Service 3</option>
+                  <option value="service1">Social Media Marketing</option>
+                  <option value="service2">
+                    Search Engine Optimization(SEO)
+                  </option>
+                  <option value="service3">Pay Per Click(PPC)</option>
+                  <option value="service3">Content & Email Marketing</option>
+                  <option value="service3">Website Development</option>
                 </select>
               </div>
             </div>
@@ -281,7 +285,13 @@
                 placeholder="Write your message"
               ></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button
+              type="submit"
+              class="container d-flex align-items-center justify-content-center btn btn-primary"
+              style="height: 5vh; width: 20%;"
+            >
+              Send Message
+            </button>
           </form>
         </div>
       </section>
