@@ -3,12 +3,26 @@ body {
 }
 
 .header-container {
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 header {
   background-color: green;
+}
+
+header .navbar-brand {
+  font-size: 2rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2em; /* Increase the font size */
+  padding: 0.5em 1em; /* Add padding to increase clickable area */
+  font-weight: 500;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 1em; /* Increase margin between nav items */
 }
 
 .circle-card {
