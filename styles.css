@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  color: black;
+  font-size: 2rem;
+}
+
+.nav-link {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: black;
+}
+
+.search {
+  height: 40px;
+  width: 80%;
+  border-radius: 60px;
+  outline: none;
+  border: 2px solid rgb(248, 26, 92);
+  margin-right: -35px;
+}
+
+.btn0 {
+  height: 40px;
+  width: 40%;
+  outline: none;
+  border: none;
+  background: rgb(248, 26, 92);
+  color: white;
+  border-radius: 60px;
+  font-weight: 700;
+}
+
+.main {
+  background: url("./assets/cool-background.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 50% 50%;
+  width: 100%;
+}
+
+.main h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.btn1 {
+  height: 45px;
+  width: 16%;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  border-radius: 60px;
+}
+
+.info {
+  background-position: 50% 50%;
+  width: 100%;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.info h1 {
+  max-width: 85%;
+  max-height: 85%;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.info p {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.info img {
+  max-width: 85%;
+  max-height: 85%;
+  height: auto;
+  border-radius: 40px;
+}
+
+.submit {
+  background-color: rgb(248, 26, 92);
+  border-color: rgb(248, 26, 92);
+  font-weight: 700;
+}
+
+.submit:hover {
+  background-color: rgb(46, 0, 252);
+  border-color: rgb(0, 55, 252);
+  color: white;
+}
+
+.services {
+  margin-top: 3.5rem !important;
+  margin-bottom: 2rem !important; /* Reduce the bottom margin */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgb(172, 172, 172);
+}
+
+.card:hover {
+  border: 1px solid black;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.custom-card {
+  border-radius: 20px; /* Adjust the value as needed */
+}
+
+.custom-card .card-img-top {
+  border-top-left-radius: 20px; /* Match the card border radius */
+  border-top-right-radius: 20px; /* Match the card border radius */
+}
+
+.custom-card {
+  border-radius: 20px; /* Adjust the value as needed */
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-3 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* why-us section */
+.why-us {
+  margin-top: 2rem;
+  padding: 3rem 0;
+  background: url("./assets/Why-us.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  color: rgb(252, 242, 229);
+}
+
+.why-us h2 {
+  width: 100%;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.why-us ul {
+  padding-left: 0;
+  width: 50%;
+}
+
+.why-us li {
+  margin-bottom: 1rem;
+}
+
+.why-us strong {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.why-us p {
+  margin: 0;
+}
+
+.message {
+  margin-top: -2rem !important; /* Reduce the top margin */
+  margin-bottom: 0rem !important;
+  background: linear-gradient(to left, #4169e1, #87cefa);
+}
+
+/* footer section */
+
+.footer {
+  background-color: #000000; /* Light grey background */
+  color: #ffffff; /* Dark text color */
+}
+
+.footer h5 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer p,
+.footer ul {
+  margin-bottom: 1rem;
+}
+
+.footer .ftr-about {
+  width: 90%;
+}
+
+.footer ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer ul li a {
+  color: #ffffff; /* Dark link color */
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer .lastline {
+  border: 4px rgb(255, 255, 255) solid;
+}
+
+/* footer section end  */
+
+/* media query for cards */
+@media (max-width: 576px) {
+  .custom-card:not(:first-child) {
+    margin-top: 1rem; /* Adjust the value as needed */
+  }
+}
+
+/* media query for info section */
+@media (max-width: 576px) {
+  .info {
+    margin-top: 1.5rem !important; /* Adjust the value as needed */
+  }
+}
+
+/* media query for btn-1 */
+@media (max-width: 576px) {
+  .btn1 {
+    height: 45px;
+    width: 40%;
+  }
+}
+
+/* Media query for small screens---> why-us section */
+@media (max-width: 576px) {
+  .why-us ul {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+/* Media query for medium screens */
+@media (min-width: 576px) and (max-width: 767px) {
+  .why-us ul {
+    width: 90%;
+  }
+}
+
+/* Media query for large screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .why-us ul {
+    width: 85%;
+  }
+}
+
+/* Media query for extra-large screens */
+@media (min-width: 1024px) {
+  .why-us ul {
+    width: 55%;
+  }
+}
