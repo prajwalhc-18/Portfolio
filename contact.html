@@ -180,8 +180,9 @@
         border: 4px rgb(255, 255, 255) solid;
       }
     </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      (function () {
+      (function() {
         emailjs.init("d3gUbh68tDfDtRo9e");
       })();
     </script>
@@ -296,14 +297,14 @@
       <section class="message py-4">
         <div class="container">
           <h2 class="text-center mb-4">Drop a Message</h2>
-          <form>
+          <form id="message-section">
             <div class="row mb-3">
               <!-- Name Field -->
               <div class="col-md-6">
                 <label
                   for="name"
                   class="form-label"
-                  style="color: white; font-weight: 600"
+                  style="color: white;"
                   >Name</label
                 >
                 <input
@@ -311,7 +312,6 @@
                   class="form-control"
                   id="name"
                   placeholder="Your Name"
-                  style="font-weight: 600"
                 />
               </div>
               <!-- Phone Number Field -->
@@ -319,7 +319,7 @@
                 <label
                   for="phone"
                   class="form-label"
-                  style="color: white; font-weight: 600"
+                  style="color: white;"
                   >Phone Number</label
                 >
                 <input
@@ -327,7 +327,6 @@
                   class="form-control"
                   id="phone"
                   placeholder="Your Phone Number"
-                  style="font-weight: 600"
                 />
               </div>
             </div>
@@ -337,7 +336,7 @@
                 <label
                   for="email"
                   class="form-label"
-                  style="color: white; font-weight: 600"
+                  style="color: white;"
                   >Email</label
                 >
                 <input
@@ -345,7 +344,6 @@
                   class="form-control"
                   id="email"
                   placeholder="Your Email"
-                  style="font-weight: 600"
                 />
               </div>
               <!-- Services Selection Field -->
@@ -353,23 +351,23 @@
                 <label
                   for="services"
                   class="form-label"
-                  style="color: white; font-weight: 600"
+                  style="color: white;"
                   >Services</label
                 >
                 <select class="form-select" id="services">
-                  <option selected style="font-weight: 600 !important">
+                  <option selected >
                     Select a Service
                   </option>
-                  <option value="1" style="font-weight: 600">
+                  <option value="Social Media Marketing">
                     Social Media Marketing
                   </option>
-                  <option value="2" style="font-weight: 600">
+                  <option value="Search Engine Marketing">
                     Search Engine Marketing
                   </option>
-                  <option value="3" style="font-weight: 600">
+                  <option value="Content & Email Marketing">
                     Content & Email Marketing
                   </option>
-                  <option value="4" style="font-weight: 600">
+                  <option value="Video & Graphics Marketing">
                     Video & Graphics Marketing
                   </option>
                 </select>
@@ -557,23 +555,6 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const selectElement = document.getElementById("services");
-
-      function applyBoldStyle() {
-        if (selectElement.selectedIndex === 0) {
-          selectElement.classList.add("bold");
-        } else {
-          selectElement.classList.remove("bold");
-        }
-      }
-
-      // Initial call to apply bold style to the default selected option
-      applyBoldStyle();
-
-      // Apply bold style when the selection changes
-      selectElement.addEventListener("change", applyBoldStyle);
-    </script>
-    <script>
       function handleSearch(event) {
         event.preventDefault(); // Prevent the default form submission
         const searchInput = document
@@ -591,6 +572,37 @@
           alert("Page not found"); // Handle invalid search terms
         }
       }
+    </script>
+    <script>
+      document
+        .getElementById("message-section")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let params = {
+            to_name: "Rahul Yadav", // Replace with actual recipient name
+            from_name: document.getElementById("name").value,
+            email_id: document.getElementById("email").value,
+            service: document.getElementById("services").value,
+            phone_number: document.getElementById("phone").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs.send("service_jaztsda", "template_ou0e6jd", params).then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Your message has been sent!");
+              document.getElementById("message-section").reset(); // Reset the form
+              setTimeout(function () {
+                location.reload(); // Refresh the page after a short delay
+              }, 1000); // Adjust the delay time as needed
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("Failed to send your message.");
+            }
+          );
+        });
     </script>
   </body>
 </html>
