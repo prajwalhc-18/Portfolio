@@ -59,9 +59,25 @@
         border-radius: 60px;
         font-weight: 700;
       }
-      /* Style for the selected option displayed in the input row */
-      .message .form-select.bold {
+      /* all services  */
+      .service-section {
+        padding: 60px 0;
+      }
+      .service-title {
+        margin-bottom: 20px;
+        font-size: 24px;
         font-weight: 600;
+      }
+      .service-description {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .service-box {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
       }
 
       /* footer section */
@@ -109,11 +125,6 @@
         border: 4px rgb(255, 255, 255) solid;
       }
     </style>
-    <script>
-      (function () {
-        emailjs.init("d3gUbh68tDfDtRo9e");
-      })();
-    </script>
   </head>
   <body>
     <header>
@@ -166,8 +177,77 @@
       </nav>
     </header>
 
-    <main>
-      <!-- --------------------------------------------- -->
+    <main class="container service-section">
+      <section class="all-services mb-5">
+        <div class="text-center mb-5">
+          <h1 class="display-4">Our Digital Marketing Services</h1>
+          <p class="lead">
+            We offer a range of services to help your business thrive in the
+            digital world.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="service-box">
+              <h3 class="service-title">Social Media Marketing</h3>
+              <p class="service-description">
+                Enhance your brand presence on social media platforms with our
+                expert strategies. We create engaging content, manage your
+                profiles, and run effective ad campaigns to reach your target
+                audience and boost your brand's visibility.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <h3 class="service-title">Search Engine Optimization (SEO)</h3>
+              <p class="service-description">
+                Increase your website's visibility on search engines with our
+                comprehensive SEO services. We perform keyword research, on-page
+                and off-page optimization, and continuous performance tracking
+                to ensure higher rankings and more organic traffic.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service-box">
+              <h3 class="service-title">Content & Email Marketing</h3>
+              <p class="service-description">
+                Engage your audience with high-quality content and targeted
+                email campaigns. Our team crafts compelling blog posts,
+                newsletters, and email sequences that resonate with your
+                audience, driving engagement and conversions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="all-services">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="service-box">
+              <h3 class="service-title">Video & Graphics Marketing</h3>
+              <p class="service-description">
+                Captivate your audience with stunning videos and graphics. We
+                produce professional videos, infographics, and visual content
+                that tell your brand's story, convey your message, and engage
+                your audience effectively.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service-box">
+              <h3 class="service-title">Website Development</h3>
+              <p class="service-description">
+                Build a robust online presence with our custom website
+                development services. We design and develop responsive,
+                user-friendly websites that not only look great but also provide
+                an excellent user experience and drive business growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
