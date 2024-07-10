@@ -109,7 +109,7 @@
 /* Services start>>>>>>>>>>>>>>>>> */
 .services {
   margin-top: 3.5rem !important;
-  margin-bottom: 2rem !important; /* Reduce the bottom margin */
+  margin-bottom: 1.5rem !important; /* Reduce the bottom margin */
 }
 
 .services h2 {
@@ -159,7 +159,7 @@
 
 /* why-us section */
 .why-us {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 3rem 0;
   background: url("./assets/Why-us.jpg") no-repeat center center;
   background-size: cover;
