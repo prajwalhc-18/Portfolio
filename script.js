@@ -15,3 +15,4 @@ function handleSearch(event) {
     alert("Page not found"); // Handle invalid search terms
   }
 }
+
