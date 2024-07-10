@@ -11,6 +11,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("d3gUbh68tDfDtRo9e");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -261,9 +267,8 @@
       <section class="message py-4">
         <div class="container">
           <h2 class="text-center mb-4">Drop a Message</h2>
-          <form>
+          <form id="message-section">
             <div class="row mb-3">
-              <!-- Name Field -->
               <div class="col-md-6">
                 <label for="name" class="form-label">Name</label>
                 <input
@@ -273,7 +278,6 @@
                   placeholder="Your Name"
                 />
               </div>
-              <!-- Phone Number Field -->
               <div class="col-md-6">
                 <label for="phone" class="form-label">Phone Number</label>
                 <input
@@ -285,7 +289,6 @@
               </div>
             </div>
             <div class="row mb-3">
-              <!-- Email Field -->
               <div class="col-md-6">
                 <label for="email" class="form-label">Email</label>
                 <input
@@ -295,20 +298,18 @@
                   placeholder="Your Email"
                 />
               </div>
-              <!-- Services Selection Field -->
               <div class="col-md-6">
                 <label for="services" class="form-label">Services</label>
                 <select class="form-select" id="services">
-                  <option selected>Select a Service</option>
-                  <option value="1">Social Media Marketing</option>
-                  <option value="2">Search Engine Marketing</option>
-                  <option value="3">Content & Email Marketing</option>
-                  <option value="4">Video & Graphics Marketing</option>
+                  <option value="" disabled selected>Select a Service</option>
+                  <option value="Social Media Marketing">Social Media Marketing</option>
+                  <option value="Search Engine Marketing">Search Engine Marketing</option>
+                  <option value="Content & Email Marketing">Content & Email Marketing</option>
+                  <option value="Video & Graphics Marketing">Video & Graphics Marketing</option>
                 </select>
               </div>
             </div>
             <div class="row mb-3">
-              <!-- Message Field -->
               <div class="col-12">
                 <label for="message" class="form-label">Message</label>
                 <textarea
@@ -319,7 +320,6 @@
                 ></textarea>
               </div>
             </div>
-            <!-- Submit Button -->
             <div class="row">
               <div class="col-12 text-center">
                 <button type="submit" class="btn submit py-2">Submit</button>
@@ -489,9 +489,35 @@
     ></script>
     <script src="script.js"></script>
     <script>
-      (function() {
-        emailjs.init("d3gUbh68tDfDtRo9e");
-      })();
+      document
+        .getElementById("message-section")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let params = {
+            to_name: "Rahul Yadav", // Replace with actual recipient name
+            from_name: document.getElementById("name").value,
+            email_id: document.getElementById("email").value,
+            service: document.getElementById("services").value,
+            phone_number: document.getElementById("phone").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs.send("service_jaztsda", "template_ou0e6jd", params).then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+              alert("Your message has been sent!");
+              document.getElementById("message-section").reset(); // Reset the form
+              setTimeout(function () {
+                location.reload(); // Refresh the page after a short delay
+              }, 1000); // Adjust the delay time as needed
+            },
+            function (error) {
+              console.log("FAILED...", error);
+              alert("Failed to send your message.");
+            }
+          );
+        });
     </script>
   </body>
 </html>
