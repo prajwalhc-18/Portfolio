@@ -52,7 +52,12 @@
               />
               <button class="btn0" type="submit">Search</button>
             </form> -->
-            <form id="searchForm" class="d-flex" role="search" onsubmit="handleSearch(event)">
+            <form
+              id="searchForm"
+              class="d-flex"
+              role="search"
+              onsubmit="handleSearch(event)"
+            >
               <input
                 id="searchInput"
                 class="px-2 search"
@@ -61,7 +66,7 @@
                 aria-label="Search"
               />
               <button class="btn0" type="submit">Search</button>
-            </form>            
+            </form>
           </div>
         </div>
       </nav>
@@ -74,7 +79,13 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <h1>Your One-Stop Solution for Digital Marketing Success</h1>
-              <button class="btn1 mt-4">Quick Call Back</button>
+              <button
+                id="quickCallBackButton"
+                class="btn1 mt-4"
+                onclick="window.location.href='contact.html';"
+              >
+                Quick Call Back
+              </button>
             </div>
           </div>
         </div>
