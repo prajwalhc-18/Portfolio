@@ -85,9 +85,9 @@
       /* why-us section */
       .why-us {
         padding: 3rem 0;
-        background: url("/assets/Why-us.jpg") no-repeat center center;
+        background: url("/assets/bg-why.jpg") no-repeat center center;
         background-size: cover;
-        height: 100vh;
+        height: 90vh;
         color: rgb(252, 242, 229);
       }
 
@@ -158,6 +158,40 @@
 
       .footer .lastline {
         border: 4px rgb(255, 255, 255) solid;
+      }
+      /* Media query for small screens---> why-us section */
+      @media (max-width: 576px) {
+        .why-us {
+          padding-top: 0.25rem !important;
+        }
+        .why-us ul {
+          padding-left: 0;
+          width: 100%;
+        }
+      }
+
+      /* Media query for medium screens */
+      @media (min-width: 576px) and (max-width: 767px) {
+        .why-us {
+          padding-top: 0.25rem !important;
+        }
+        .why-us ul {
+          width: 100%;
+        }
+      }
+
+      /* Media query for large screens */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .why-us ul {
+          width: 90%;
+        }
+      }
+
+      /* Media query for extra-large screens */
+      @media (min-width: 1024px) {
+        .why-us ul {
+          width: 55%;
+        }
       }
     </style>
   </head>

@@ -161,10 +161,9 @@
 .why-us {
   margin-top: 1rem;
   padding: 3rem 0;
-  background: url("./assets/Why-us.jpg") no-repeat center center;
-  background-size: cover;
+  background: linear-gradient(to right, #F9D423, #FF4E50);
   height: 100vh;
-  color: rgb(252, 242, 229);
+  color: rgb(255, 255, 255);
 }
 
 .why-us h2 {
