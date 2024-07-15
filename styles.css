@@ -161,9 +161,11 @@
 .why-us {
   margin-top: 1rem;
   padding: 3rem 0;
-  background: linear-gradient(135deg, #ffcc00, #ff6699);
+  background: url("./assets/new-im.jpg") no-repeat center center;
+  background-size: cover;
   height: 100vh;
   color: rgb(255, 255, 255);
+  padding-bottom: 2rem !important;
 }
 
 .why-us h2 {
@@ -356,5 +358,12 @@
 @media (min-width: 1024px) {
   .custom-card .card-img-top {
     height: 340px; /* Adjust this value for screens larger than 1024px */
+  }
+}
+
+/* Media query for small screens---> why-us section */
+@media (max-width: 576px) {
+  .why-us {
+    height: 100vh;
   }
 }
