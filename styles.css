@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100vw; /* Ensure the body takes the full viewport width */
+}
+html,
+body {
+  overflow-x: hidden;
+}
 .navbar-brand {
   color: black;
   font-size: 2.25rem;
@@ -265,7 +273,6 @@
   }
 }
 
-
 /* media query for btn-1 */
 /* media query for btn-1 */
 /* media query for btn-1 */
@@ -291,7 +298,6 @@
     width: 32%;
   }
 }
-
 
 /* Media query for small screens---> why-us section */
 @media (max-width: 576px) {
